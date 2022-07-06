@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
-  title = 'MovieShopSPA';
+  title = 'MovieShopSPA';               //the attribute of the class
 }
