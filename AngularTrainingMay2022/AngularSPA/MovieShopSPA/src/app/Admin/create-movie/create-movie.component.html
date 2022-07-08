@@ -1,1 +1,90 @@
-<p>create-movie works!</p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <div class="card">
+                <div class="alert alert-primary" role="alert" *ngIf="added">
+                    Movie has been added Successfully! 
+                </div>
+                <div class="alert alert-primary text-danger" role="alert" *ngIf="failed">
+                    Movie creating failed!
+                </div>
+                <div class="card-header">
+                    <h3>Angular-Reactive Add-Movie Form</h3>
+                </div>
+                <div class="card-body">
+                    <form class="form" [formGroup]="addMovieForm" (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                            <label>Title: </label>
+                            <input type="text" class="form-control" formControlName="Title" />
+                            <span class="text-danger" *ngIf="(addMovieFormControl['Title'].touched || submitted) && (addMovieFormControl['Title'].errors?.['required'])" >Title is Required!</span>
+                        </div>
+                        <div class="form-group">
+                            <label>Overview: </label>
+                            <input type="text" class="form-control" formControlName="Overview" />
+                            <span class="text-danger" *ngIf="(addMovieFormControl['Overview'].touched || submitted) && (addMovieFormControl['Overview'].errors?.['required'])" >Overview is Required!</span>
+                        </div>
+                        <div class="form-group">
+                            <label>Budget: </label>
+                            <input type="number" class="form-control" formControlName="Budget" />
+                        </div>
+                        <div class="form-group">
+                            <label>Revenue: </label>
+                            <input type="number" class="form-control" formControlName="Revenue" />
+                            <span class="text-danger" *ngIf="(addMovieFormControl['Revenue'].touched || submitted) && (addMovieFormControl['Revenue'].errors?.['required'])" >Revenue is Required!</span>
+                        </div>
+                        <div class="form-group">
+                            <label>PosterUrl: </label>
+                            <input type="url" class="form-control" formControlName="PosterUrl" />
+                            <span class="text-danger" *ngIf="(addMovieFormControl['PosterUrl'].touched || submitted) && (addMovieFormControl['PosterUrl'].errors?.['required'])" >PosterUrl is Required!</span>
+                        </div>
+                        <div class="form-group">
+                            <label>OriginalLanguage: </label>
+                            <input type="text" class="form-control" formControlName="OriginalLanguage" />
+                        </div>
+                        <div class="form-group">
+                            <label>ReleaseDate: </label>
+                            <input type="Date" class="form-control" formControlName="ReleaseDate" />
+                            <span class="text-danger" *ngIf="(addMovieFormControl['ReleaseDate'].touched || submitted) && (addMovieFormControl['ReleaseDate'].errors?.['required'])" >ReleaseDate is Required!</span>
+                        </div>
+                        <div class="form-group">
+                            <label>RunTime: </label>
+                            <input type="number" class="form-control" formControlName="RunTime" />
+                        </div>
+                        <div class="form-group">
+                            <label>Price: </label>
+                            <input type="number" class="form-control" formControlName="Price" />
+                            <span class="text-danger" *ngIf="(addMovieFormControl['Price'].touched || submitted) && (addMovieFormControl['Price'].errors?.['required'])" >Price is Required!</span>
+                           
+                        </div>
+                        <div class="form-group">
+                            <label>CreatedDate: </label>
+                            <input type="Date" class="form-control" formControlName="CreatedDate" />
+                            <span class="text-danger" *ngIf="(addMovieFormControl['CreatedDate'].touched || submitted) && (addMovieFormControl['CreatedDate'].errors?.['required'])" >CreatedDate is Required!</span>
+                        </div>
+<!--                         <div class="form-group">
+                            <label>UpdatedDate: </label>
+                            <input type="Date" class="form-control" formControlName="UpdatedDate" />
+                            <span class="text-danger" *ngIf="(addMovieFormControl['DateOfBirth'].touched || submitted) && (addMovieFormControl['DateOfBirth'].errors?.['required'])" >Date of Birth is Required!</span>
+                        </div> -->
+<!--                         <div class="form-group">
+                            <label>UpdatedBy: </label>
+                            <input type="text" class="form-control" formControlName="OriginalLanguage" />
+                            <span class="text-danger" *ngIf="(addMovieFormControl['Overview'].touched || submitted) && (addMovieFormControl['LastName'].errors?.['required'])" >Last Name is Required!</span>
+                        </div> -->
+                        <div class="form-group">
+                            <label>CreatedBy: </label>
+                            <input type="text" class="form-control" formControlName="CreatedBy" />
+                            <span class="text-danger" *ngIf="(addMovieFormControl['CreatedBy'].touched || submitted) && (addMovieFormControl['CreatedBy'].errors?.['required'])" >CreatedBy is Required!</span>
+                        </div>
+
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success">Add</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+

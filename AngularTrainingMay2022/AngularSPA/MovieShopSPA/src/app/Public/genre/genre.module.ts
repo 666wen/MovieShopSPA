@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { AddGenreComponent } from './add-genre/add-genre.component';
 import { GenreComponent } from './genre.component';
 import { NgModule } from '@angular/core';
@@ -13,7 +14,8 @@ import { GenreRoutingModule } from './genre-routing.module';
   ],
   imports: [
     CommonModule,
-    GenreRoutingModule
+    GenreRoutingModule,
+    FormsModule
   ]
 })
 export class GenreModule { }

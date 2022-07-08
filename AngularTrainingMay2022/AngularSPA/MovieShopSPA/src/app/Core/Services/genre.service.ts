@@ -15,7 +15,7 @@ export class GenreService {
   }
 
   addGenre(genre:Genre){
-    return this.http.post('https://localhost:7241/api/Genres/add-genre', genre);   //???My API accept string genre name
+    return this.http.post('https://localhost:7241/api/Genres/add-genre', genre);   //post payload need to be an obj
   }
 
   deleteGenre(genreId:number){
