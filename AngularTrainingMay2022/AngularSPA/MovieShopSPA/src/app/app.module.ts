@@ -1,3 +1,4 @@
+import { JwtAdderInterceptor } from './Core/Interceptors/jwt-adder.interceptor';
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -34,7 +35,7 @@ import { HttpClientModule } from '@angular/common/http'; //import this for servi
     GenreModule,
 
   ],
-  providers: [],
+  providers: [JwtAdderInterceptor],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
