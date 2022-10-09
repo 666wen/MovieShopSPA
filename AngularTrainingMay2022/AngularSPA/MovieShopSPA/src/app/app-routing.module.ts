@@ -1,6 +1,7 @@
 import { ReviewsComponent } from './Public/reviews/reviews.component';
 //import { GenreComponent } from './Public/genre/genre.component';
 import { HOMEComponent } from './Public/home/home.component';
+import { BudgetPlannerComponent } from './Public/budget-planner/budget-planner.component';
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -10,6 +11,7 @@ import { AdminGuardGuard } from './Core/Guards/admin-guard.guard';
 // lazy loading or not
 const routes: Routes = [
   { path: '', component: HOMEComponent },
+  {path: 'Budget', component: BudgetPlannerComponent},
   { path: 'Movies', loadChildren: () => import("./Public/movies.module").then(mod => mod.MoviesModule) },
   { path: 'Admin', loadChildren: () => import("./Admin/admin.module").then(mod => mod.AdminModule), canActivate: [AdminGuardGuard] },
   { path: 'Account', loadChildren: () => import("./Account/account.module").then(mod => mod.AccountModule) },

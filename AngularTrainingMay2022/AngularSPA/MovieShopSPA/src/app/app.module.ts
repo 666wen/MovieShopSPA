@@ -15,13 +15,16 @@ import { GenreModule } from './Public/genre/genre.module';
 
 import { RouterModule } from '@angular/router';
 
-import { HttpClientModule } from '@angular/common/http'; //import this for service using http request methods.
+import { HttpClientModule } from '@angular/common/http';  //import this for service using http request methods.
+//import { BugetPlannerComponent } from './Public/buget-planner/buget-planner.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent
-  ],
+    //BugetPlannerComponent
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
