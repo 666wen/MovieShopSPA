@@ -12,7 +12,7 @@ import { CastDetailsComponent } from './cast-details/cast-details.component';
 import { MovieComponent } from './movie-details/movie.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { BudgetPlannerComponent } from './budget-planner/budget-planner.component';
-import { ExpenseFormComponent } from './budget-planner/expense-form.component';
+
 //import { AddGenreComponent } from './genre/add-genre/add-genre.component';
 import { GenreModule } from './genre/genre.module';
 
@@ -30,7 +30,6 @@ import { ReactiveFormsModule} from '@angular/forms';
     CastDetailsComponent,
     ReviewsComponent,
     BudgetPlannerComponent,
-    ExpenseFormComponent
 
    // AddGenreComponent
   ],

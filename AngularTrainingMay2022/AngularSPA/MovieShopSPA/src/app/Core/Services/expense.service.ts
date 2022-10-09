@@ -8,8 +8,6 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ExpenseService {
 
-  private currentUserSubject = new BehaviorSubject<any>({} as any);
-  public currentUser = this.currentUserSubject.asObservable();
 
   constructor(private http:HttpClient) { }
 
