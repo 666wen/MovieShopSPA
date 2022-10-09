@@ -21,6 +21,9 @@ export class BudgetPlannerComponent implements OnInit {
    addExpenseForm:FormGroup;
    addedExpense: Expense;
    added:boolean;
+   budget:number = 5000;
+   remaining:number;
+   spent:number=0;
 
    constructor(private fb: FormBuilder, private expenseService: ExpenseService) { }
 
@@ -30,11 +33,22 @@ export class BudgetPlannerComponent implements OnInit {
       Cost:['', Validators.required]
     }
     )
+
+    //this.spent=900;
+
+    for(var c of this.expenses){
+      this.spent+=c.Cost;
+    }
+    this.remaining=this.budget-this.spent;
+
+
    }
 
   get registerFormControl() {
     return this.addExpenseForm.controls;
   }
+
+
 
   onSubmit(){
     if (this.addExpenseForm.valid) {
