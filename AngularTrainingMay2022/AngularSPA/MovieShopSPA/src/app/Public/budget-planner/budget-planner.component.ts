@@ -55,7 +55,7 @@ export class BudgetPlannerComponent implements OnInit {
 
 
   clicked(i:number){
-    this.expenses=this.expenses.slice(i)
+    this.expenses.splice(i,1);
 
    }
 
