@@ -22,7 +22,7 @@ export class BudgetPlannerComponent implements OnInit {
    addedExpense: Expense;
    added:boolean;
    budget:number = 5000;
-   remaining:number;
+   remaining:number ;
    spent:number=0;
 
    constructor(private fb: FormBuilder, private expenseService: ExpenseService) { }
@@ -34,7 +34,6 @@ export class BudgetPlannerComponent implements OnInit {
     }
     )
 
-    //this.spent=900;
 
     for(var c of this.expenses){
       this.spent+=c.Cost;
@@ -69,7 +68,10 @@ export class BudgetPlannerComponent implements OnInit {
 
 
   clicked(i:number){
+    this.spent+=this.expenses[i].Cost;
+    this.remaining=this.budget-this.spent;
     this.expenses.splice(i,1);
+    
 
    }
 
